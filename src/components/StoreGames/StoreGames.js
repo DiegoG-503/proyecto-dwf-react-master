@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from "react";
-
 import ListGames from "./ListGames";
 
 const StoreGames = () => {
@@ -23,7 +22,7 @@ const StoreGames = () => {
     
     
     <Fragment>
-      
+        
       <ListGames games={gamesData} onDeleteItem={deleteItemHandler}></ListGames>
     </Fragment>
   );

@@ -2,6 +2,7 @@ import React from "react";
 
 import gameImage from "../../img/game.jpg";
 import bookImage from "../../img/book.png";
+import NavPrincipal from "../Menu/NavPrincipal";
 
 const MainPage = (props) => {
 
@@ -14,15 +15,14 @@ const MainPage = (props) => {
   };
 
   return (
-    <div className="text-center text-bg-dark" id="tienda">
-      <section className='pb-5'>
-          <h1 className="bg-secondary">Tienda Kodigo</h1>
-          <h5>Selecciona la tienda de tu preferencia</h5>
+    <div className="text-bg-dark">
+      <section id="seccion">
+          <NavPrincipal />
         </section>
-      <div className="h-100 w-100 p-3 mx-auto flex-column">
-          <div className="row px-auto d-flex justify-content-center" >
-            <div className="col-12 col-md-6 px-3 mb-3" data-aos="fade-up">
-              <h1>Videojuegos</h1>
+      <div className=" text-center h-100 w-100 p-3 mx-auto flex-column">
+          <div className="row px-auto d-flex justify-content-center" id="tienda">
+            <div className="col-12 col-md-6 px-3 mb-3" >
+              <h2>Videojuegos</h2>
               <img
                 src={gameImage}
                 onClick={tiendaGamesHandler}
@@ -30,8 +30,8 @@ const MainPage = (props) => {
                 className="image rounded"
               />
             </div>
-            <div className="col-12 col-md-6 px-3 mb-3" data-aos="fade-up">
-              <h1>Libros</h1>
+            <div className="col-12 col-md-6 px-3 mb-3">
+              <h2>Libros</h2>
               <img
                 src={bookImage}
                 onClick={tiendaBooksHandler}
@@ -40,9 +40,8 @@ const MainPage = (props) => {
               ></img>
             </div>
           </div>
-        </div>
-
-        <footer>
+          
+        </div><footer>
           <p>Hecho por ..................</p>
         </footer>
       </div>
